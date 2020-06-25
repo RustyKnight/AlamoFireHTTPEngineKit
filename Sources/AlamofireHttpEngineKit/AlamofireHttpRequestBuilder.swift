@@ -17,7 +17,7 @@ import Cadmus
 //	}
 //}
 
-public class AlamofireHttpRequestBuilder: BaseHttpRequestBuilder {
+open class AlamofireHttpRequestBuilder: BaseHttpRequestBuilder {
 
 	override open func build() throws -> HttpEngine {
 		return AlamofireHttpEngine(url: url,
