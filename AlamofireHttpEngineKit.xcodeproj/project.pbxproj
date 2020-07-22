@@ -16,10 +16,7 @@
 		187F797F24A5872500CFFB54 /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F797A24A5872500CFFB54 /* HttpEngineCore.framework */; };
 		187F798124A5872500CFFB54 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F797B24A5872500CFFB54 /* Alamofire.framework */; };
 		187F798324A5872500CFFB54 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F797C24A5872500CFFB54 /* Hydra.framework */; };
-		187F798524A5872500CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F797D24A5872500CFFB54 /* AlamofireHttpEngineKit.framework */; };
 		187F798724A5872500CFFB54 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F797E24A5872500CFFB54 /* Cadmus.framework */; };
-		187F798F24A5873400CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F798A24A5873400CFFB54 /* AlamofireHttpEngineKit.framework */; };
-		187F799024A5873400CFFB54 /* AlamofireHttpEngineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F798A24A5873400CFFB54 /* AlamofireHttpEngineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187F799124A5873400CFFB54 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F798B24A5873400CFFB54 /* Hydra.framework */; };
 		187F799224A5873400CFFB54 /* Hydra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F798B24A5873400CFFB54 /* Hydra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187F799324A5873400CFFB54 /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F798C24A5873400CFFB54 /* HttpEngineCore.framework */; };
@@ -30,8 +27,6 @@
 		187F799824A5873400CFFB54 /* Cadmus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F798E24A5873400CFFB54 /* Cadmus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187F799F24A5874200CFFB54 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799A24A5874200CFFB54 /* Alamofire.framework */; };
 		187F79A024A5874200CFFB54 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799A24A5874200CFFB54 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		187F79A124A5874200CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799B24A5874200CFFB54 /* AlamofireHttpEngineKit.framework */; };
-		187F79A224A5874200CFFB54 /* AlamofireHttpEngineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799B24A5874200CFFB54 /* AlamofireHttpEngineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187F79A324A5874200CFFB54 /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799C24A5874200CFFB54 /* HttpEngineCore.framework */; };
 		187F79A424A5874200CFFB54 /* HttpEngineCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799C24A5874200CFFB54 /* HttpEngineCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187F79A524A5874200CFFB54 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799D24A5874200CFFB54 /* Hydra.framework */; };
@@ -40,9 +35,26 @@
 		187F79A824A5874200CFFB54 /* Cadmus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 187F799E24A5874200CFFB54 /* Cadmus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		187F79AF24A5875000CFFB54 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F79AA24A5875000CFFB54 /* Alamofire.framework */; };
 		187F79B124A5875000CFFB54 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F79AB24A5875000CFFB54 /* Cadmus.framework */; };
-		187F79B324A5875000CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F79AC24A5875000CFFB54 /* AlamofireHttpEngineKit.framework */; };
 		187F79B524A5875000CFFB54 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F79AD24A5875000CFFB54 /* Hydra.framework */; };
 		187F79B724A5875000CFFB54 /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F79AE24A5875000CFFB54 /* HttpEngineCore.framework */; };
+		188A299324C8FB3700F2CC2B /* AlamofireHttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */; };
+		188A299424C8FB3700F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
+		188A299524C8FB3700F2CC2B /* HttpEngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A124C8F91800FC2FBE /* HttpEngineConfiguration.swift */; };
+		188A299624C8FB3700F2CC2B /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A224C8F91800FC2FBE /* HttpService.swift */; };
+		188A299724C8FB3700F2CC2B /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
+		188A299824C8FB3700F2CC2B /* MultipartFormData+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A424C8F91800FC2FBE /* MultipartFormData+Item.swift */; };
+		188A299924C8FB3800F2CC2B /* AlamofireHttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */; };
+		188A299A24C8FB3800F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
+		188A299B24C8FB3800F2CC2B /* HttpEngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A124C8F91800FC2FBE /* HttpEngineConfiguration.swift */; };
+		188A299C24C8FB3800F2CC2B /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A224C8F91800FC2FBE /* HttpService.swift */; };
+		188A299D24C8FB3800F2CC2B /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
+		188A299E24C8FB3800F2CC2B /* MultipartFormData+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A424C8F91800FC2FBE /* MultipartFormData+Item.swift */; };
+		188A299F24C8FB3800F2CC2B /* AlamofireHttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */; };
+		188A29A024C8FB3800F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
+		188A29A124C8FB3800F2CC2B /* HttpEngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A124C8F91800FC2FBE /* HttpEngineConfiguration.swift */; };
+		188A29A224C8FB3800F2CC2B /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A224C8F91800FC2FBE /* HttpService.swift */; };
+		188A29A324C8FB3800F2CC2B /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
+		188A29A424C8FB3800F2CC2B /* MultipartFormData+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A424C8F91800FC2FBE /* MultipartFormData+Item.swift */; };
 		18B0A41C2381F9BE00BC0614 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 18B0A41A2381F9BE00BC0614 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +66,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				187F799424A5873400CFFB54 /* HttpEngineCore.framework in Embed Frameworks */,
-				187F799024A5873400CFFB54 /* AlamofireHttpEngineKit.framework in Embed Frameworks */,
 				187F799224A5873400CFFB54 /* Hydra.framework in Embed Frameworks */,
 				187F799624A5873400CFFB54 /* Alamofire.framework in Embed Frameworks */,
 				187F799824A5873400CFFB54 /* Cadmus.framework in Embed Frameworks */,
@@ -69,7 +80,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				187F79A424A5874200CFFB54 /* HttpEngineCore.framework in Embed Frameworks */,
-				187F79A224A5874200CFFB54 /* AlamofireHttpEngineKit.framework in Embed Frameworks */,
 				187F79A024A5874200CFFB54 /* Alamofire.framework in Embed Frameworks */,
 				187F79A624A5874200CFFB54 /* Hydra.framework in Embed Frameworks */,
 				187F79A824A5874200CFFB54 /* Cadmus.framework in Embed Frameworks */,
@@ -89,21 +99,17 @@
 		187F797A24A5872500CFFB54 /* HttpEngineCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HttpEngineCore.framework; path = Carthage/Build/iOS/HttpEngineCore.framework; sourceTree = "<group>"; };
 		187F797B24A5872500CFFB54 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		187F797C24A5872500CFFB54 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
-		187F797D24A5872500CFFB54 /* AlamofireHttpEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireHttpEngineKit.framework; path = Carthage/Build/iOS/AlamofireHttpEngineKit.framework; sourceTree = "<group>"; };
 		187F797E24A5872500CFFB54 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/iOS/Cadmus.framework; sourceTree = "<group>"; };
-		187F798A24A5873400CFFB54 /* AlamofireHttpEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireHttpEngineKit.framework; path = Carthage/Build/watchOS/AlamofireHttpEngineKit.framework; sourceTree = "<group>"; };
 		187F798B24A5873400CFFB54 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/watchOS/Hydra.framework; sourceTree = "<group>"; };
 		187F798C24A5873400CFFB54 /* HttpEngineCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HttpEngineCore.framework; path = Carthage/Build/watchOS/HttpEngineCore.framework; sourceTree = "<group>"; };
 		187F798D24A5873400CFFB54 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
 		187F798E24A5873400CFFB54 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/watchOS/Cadmus.framework; sourceTree = "<group>"; };
 		187F799A24A5874200CFFB54 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
-		187F799B24A5874200CFFB54 /* AlamofireHttpEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireHttpEngineKit.framework; path = Carthage/Build/tvOS/AlamofireHttpEngineKit.framework; sourceTree = "<group>"; };
 		187F799C24A5874200CFFB54 /* HttpEngineCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HttpEngineCore.framework; path = Carthage/Build/tvOS/HttpEngineCore.framework; sourceTree = "<group>"; };
 		187F799D24A5874200CFFB54 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/tvOS/Hydra.framework; sourceTree = "<group>"; };
 		187F799E24A5874200CFFB54 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/tvOS/Cadmus.framework; sourceTree = "<group>"; };
 		187F79AA24A5875000CFFB54 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		187F79AB24A5875000CFFB54 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/Mac/Cadmus.framework; sourceTree = "<group>"; };
-		187F79AC24A5875000CFFB54 /* AlamofireHttpEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireHttpEngineKit.framework; path = Carthage/Build/Mac/AlamofireHttpEngineKit.framework; sourceTree = "<group>"; };
 		187F79AD24A5875000CFFB54 /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/Mac/Hydra.framework; sourceTree = "<group>"; };
 		187F79AE24A5875000CFFB54 /* HttpEngineCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HttpEngineCore.framework; path = Carthage/Build/Mac/HttpEngineCore.framework; sourceTree = "<group>"; };
 		18B0A40E2381F9B100BC0614 /* AlamofireHttpEngineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireHttpEngineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187F798524A5872500CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */,
 				187F798324A5872500CFFB54 /* Hydra.framework in Frameworks */,
 				187F797F24A5872500CFFB54 /* HttpEngineCore.framework in Frameworks */,
 				187F798124A5872500CFFB54 /* Alamofire.framework in Frameworks */,
@@ -133,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				187F799324A5873400CFFB54 /* HttpEngineCore.framework in Frameworks */,
-				187F798F24A5873400CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */,
 				187F799124A5873400CFFB54 /* Hydra.framework in Frameworks */,
 				187F799524A5873400CFFB54 /* Alamofire.framework in Frameworks */,
 				187F799724A5873400CFFB54 /* Cadmus.framework in Frameworks */,
@@ -145,7 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				187F79A324A5874200CFFB54 /* HttpEngineCore.framework in Frameworks */,
-				187F79A124A5874200CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */,
 				187F799F24A5874200CFFB54 /* Alamofire.framework in Frameworks */,
 				187F79A524A5874200CFFB54 /* Hydra.framework in Frameworks */,
 				187F79A724A5874200CFFB54 /* Cadmus.framework in Frameworks */,
@@ -156,7 +159,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187F79B324A5875000CFFB54 /* AlamofireHttpEngineKit.framework in Frameworks */,
 				187F79AF24A5875000CFFB54 /* Alamofire.framework in Frameworks */,
 				187F79B724A5875000CFFB54 /* HttpEngineCore.framework in Frameworks */,
 				187F79B124A5875000CFFB54 /* Cadmus.framework in Frameworks */,
@@ -207,22 +209,18 @@
 			isa = PBXGroup;
 			children = (
 				187F79AA24A5875000CFFB54 /* Alamofire.framework */,
-				187F79AC24A5875000CFFB54 /* AlamofireHttpEngineKit.framework */,
 				187F79AB24A5875000CFFB54 /* Cadmus.framework */,
 				187F79AE24A5875000CFFB54 /* HttpEngineCore.framework */,
 				187F79AD24A5875000CFFB54 /* Hydra.framework */,
 				187F799A24A5874200CFFB54 /* Alamofire.framework */,
-				187F799B24A5874200CFFB54 /* AlamofireHttpEngineKit.framework */,
 				187F799E24A5874200CFFB54 /* Cadmus.framework */,
 				187F799C24A5874200CFFB54 /* HttpEngineCore.framework */,
 				187F799D24A5874200CFFB54 /* Hydra.framework */,
 				187F798D24A5873400CFFB54 /* Alamofire.framework */,
-				187F798A24A5873400CFFB54 /* AlamofireHttpEngineKit.framework */,
 				187F798E24A5873400CFFB54 /* Cadmus.framework */,
 				187F798C24A5873400CFFB54 /* HttpEngineCore.framework */,
 				187F798B24A5873400CFFB54 /* Hydra.framework */,
 				187F797B24A5872500CFFB54 /* Alamofire.framework */,
-				187F797D24A5872500CFFB54 /* AlamofireHttpEngineKit.framework */,
 				187F797E24A5872500CFFB54 /* Cadmus.framework */,
 				187F797A24A5872500CFFB54 /* HttpEngineCore.framework */,
 				187F797C24A5872500CFFB54 /* Hydra.framework */,
@@ -436,6 +434,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188A299724C8FB3700F2CC2B /* HttpURLRequestBuilder.swift in Sources */,
+				188A299524C8FB3700F2CC2B /* HttpEngineConfiguration.swift in Sources */,
+				188A299624C8FB3700F2CC2B /* HttpService.swift in Sources */,
+				188A299424C8FB3700F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */,
+				188A299324C8FB3700F2CC2B /* AlamofireHttpEngine.swift in Sources */,
+				188A299824C8FB3700F2CC2B /* MultipartFormData+Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +447,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188A299D24C8FB3800F2CC2B /* HttpURLRequestBuilder.swift in Sources */,
+				188A299B24C8FB3800F2CC2B /* HttpEngineConfiguration.swift in Sources */,
+				188A299C24C8FB3800F2CC2B /* HttpService.swift in Sources */,
+				188A299A24C8FB3800F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */,
+				188A299924C8FB3800F2CC2B /* AlamofireHttpEngine.swift in Sources */,
+				188A299E24C8FB3800F2CC2B /* MultipartFormData+Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +460,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188A29A324C8FB3800F2CC2B /* HttpURLRequestBuilder.swift in Sources */,
+				188A29A124C8FB3800F2CC2B /* HttpEngineConfiguration.swift in Sources */,
+				188A29A224C8FB3800F2CC2B /* HttpService.swift in Sources */,
+				188A29A024C8FB3800F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */,
+				188A299F24C8FB3800F2CC2B /* AlamofireHttpEngine.swift in Sources */,
+				188A29A424C8FB3800F2CC2B /* MultipartFormData+Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
