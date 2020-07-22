@@ -1,3 +1,3 @@
-# AlamofireHttpEngineKit
+# AlamoFireHTTPEngineKit
 
-A implementation of the HttpEngineCore framework using Alamofire
+An implement of the HTTPEngineKit backed by AlamoFire
