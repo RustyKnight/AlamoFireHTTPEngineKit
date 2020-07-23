@@ -62,7 +62,7 @@ public extension RequestResponse {
 	}
 }
 
-class AlamofireHttpEngine: HttpEngine {
+public class AlamofireHttpEngine: HttpEngine {
 	
 	static let processQueue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
 
@@ -83,7 +83,7 @@ class AlamofireHttpEngine: HttpEngine {
 		return sessionManager
 	}()
 	
-	init(url: URL,
+	public init(url: URL,
 			 parameters: [String: String]? = nil,
 			 headers: [String: String]? = nil,
 			 credentials: HttpEngineCore.Credentials? = nil,
@@ -175,39 +175,39 @@ class AlamofireHttpEngine: HttpEngine {
 		})
   }
 	
-	func get() -> Promise<RequestResponse> {
+	public func get() -> Promise<RequestResponse> {
     return execute(method: .get)
 	}
 	
-	func get(data: Data) -> Promise<RequestResponse> {
+	public func get(data: Data) -> Promise<RequestResponse> {
     return execute(data: data, method: .get)
 	}
 	
-  func put() -> Promise<RequestResponse> {
+  public func put() -> Promise<RequestResponse> {
     return execute(method: .put)
   }
   
-	func put(data: Data) -> Promise<RequestResponse> {
+	public func put(data: Data) -> Promise<RequestResponse> {
     return execute(data: data, method: .put)
 	}
   
-  func post() -> Promise<RequestResponse> {
+  public func post() -> Promise<RequestResponse> {
     return execute(method: .post)
   }
 	
-	func post(data: Data) -> Promise<RequestResponse> {
+	public func post(data: Data) -> Promise<RequestResponse> {
     return execute(data: data, method: .post)
 	}
 	
-	func post(formData: [MultipartFormItem]) -> Promise<RequestResponse> {
+	public func post(formData: [MultipartFormItem]) -> Promise<RequestResponse> {
     return execute(using: .post, formData: formData)
   }
 
-	func delete() -> Promise<RequestResponse> {
+	public func delete() -> Promise<RequestResponse> {
     return execute(method: .delete)
 	}
 	
-	func delete(data: Data) -> Promise<RequestResponse> {
+	public func delete(data: Data) -> Promise<RequestResponse> {
 		return execute(data: data, method: .delete)
 	}
 	
