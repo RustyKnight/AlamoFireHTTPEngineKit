@@ -1,8 +1,8 @@
-binary "https://www.kiazenenterprises.org:8443/json/11.5b11E608c/HttpEngineCore" ~> 0.0.13
-# git "https://github.com/RustyKnight/HttpEngineCore" "master"
-binary "https://www.kiazenenterprises.org:8443/json/11.5b11E608c/Alamofire" ~> 4.8.0
+binary "https://www.kiazenenterprises.org:8443/json/12.0b12A7209/HttpEngineCore" ~> 2.0.0
+binary "https://www.kiazenenterprises.org:8443/json/12.0b12A7209/Alamofire" ~> 5.2.2
 
 # Promises
-binary "https://www.kiazenenterprises.org:8443/json/11.5b11E608c/Hydra" ~> 2.0.3
+github "mxcl/PromiseKit" ~> 6.8
 
-binary "https://www.kiazenenterprises.org:8443/json/11.5b11E608c/Cadmus" ~> 1.0.5
+# Logging
+binary "https://www.kiazenenterprises.org:8443/json/12.0b12A7209/Cadmus" ~> 1.0.5

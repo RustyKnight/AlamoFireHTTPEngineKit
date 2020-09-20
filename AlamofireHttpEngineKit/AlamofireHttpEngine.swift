@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-import Hydra
+import PromiseKit
 import Cadmus
 import HttpEngineCore
 
@@ -73,6 +73,8 @@ public class AlamofireHttpEngine: HttpEngine {
 	var progressMonitor: ProgressMonitor?
 	var timeout: TimeInterval = 30
 	
+	var dispatchQueue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
+	
 	internal lazy var session: SessionManager = {
 		let sessionConfig = URLSessionConfiguration.default
 		sessionConfig.timeoutIntervalForRequest = timeout
@@ -99,7 +101,7 @@ public class AlamofireHttpEngine: HttpEngine {
 		self.progressMonitor = progressMonitor
 	}
 	
-	func process(_ response: DataResponse<Data>, then fulfill: (RequestResponse) -> Void, fail: (Error) -> Void) {
+	func process(_ response: DataResponse<Data>, resolver: Resolver<RequestResponse>) {
 		var statusCode = -1
 		var description = "Unknown"
 		if let httpResponse = response.response {
@@ -118,20 +120,20 @@ public class AlamofireHttpEngine: HttpEngine {
 		switch response.result {
 		case .success(let data):
 			let headers = response.response?.allHeaderFields
-			
-			fulfill(DefaultRequestResponse(statusCode: statusCode, statusDescription: description, data: data, responseHeaders: headers))
+
+			let result = DefaultRequestResponse(statusCode: statusCode, statusDescription: description, data: data, responseHeaders: headers)
+			resolver.fulfill(result)
 		case .failure(let error):
 			log(error: "Request to \(url) failed with \(error)")
-			fail(error)
+			resolver.reject(error)
 		}
 	}
 
   func execute(method: HTTPMethod) -> Promise<RequestResponse> {
-    log(debug: "\(method) - \(url)")
-    return Promise<RequestResponse>(in: .userInitiated, { (fulfill, fail, _) in
+		return firstly(on: dispatchQueue) { (seal) in
 			log(debug: """
 
-				\trequest to: \(self.url)
+				\t\(method): \(self.url)
 				""")
 			self.session.request(self.url,
 													 method: method,
@@ -145,16 +147,16 @@ public class AlamofireHttpEngine: HttpEngine {
 					self.progressMonitor?(progress.fractionCompleted)
 			}.responseData(queue: AlamofireHttpEngine.processQueue,
 										 completionHandler: { (response) in
-											self.process(response, then: fulfill, fail: fail)
+											self.process(response, resolver: seal)
 			})
-		})
+		}
   }
   
   func execute(data: Data, method: HTTPMethod) -> Promise<RequestResponse> {
-		return Promise<RequestResponse>(in: .userInitiated, { (fulfill, fail, _) in
+		return firstly(on: dispatchQueue) { (seal) in
 			log(debug: """
 				
-				\trequest: \(method) to \(self.url)
+				\t\(method) to \(self.url)
 				""")
 			self.session.upload(data,
 													to: self.url,
@@ -170,9 +172,9 @@ public class AlamofireHttpEngine: HttpEngine {
 					self.progressMonitor?(progress.fractionCompleted)
 			}.responseData(queue: AlamofireHttpEngine.processQueue,
 										 completionHandler: { (response) in
-											self.process(response, then: fulfill, fail: fail)
+											self.process(response, resolver: seal)
 			})
-		})
+		}
   }
 	
 	public func get() -> Promise<RequestResponse> {
@@ -212,11 +214,11 @@ public class AlamofireHttpEngine: HttpEngine {
 	}
 	
 	internal func execute(using method: HTTPMethod, formData: [MultipartFormItem]) -> Promise<RequestResponse> {
-		log(debug: """
-			
-			\trequest: \(method) to \(self.url)
-			""")
-		return Promise<RequestResponse>(in: .userInitiated, { (fulfill, fail, _) in
+		return firstly(on: dispatchQueue) { (seal) in
+			log(debug: """
+				
+				\tmethod: \(method) to \(self.url)
+				""")
 			self.session.upload(multipartFormData: { (mfd) in
 				for item in formData {
 					mfd.append(item)
@@ -226,20 +228,21 @@ public class AlamofireHttpEngine: HttpEngine {
 				 headers: self.headers) { (encodingResult) in
 					switch encodingResult {
 					case .success(let request, _, _):
-						self.execute(request).then { (response) in
-							fulfill(response)
+						
+						self.execute(request).done { (response) in
+							seal.fulfill(response)
 						}.catch { (error) in
-							fail(error)
+							seal.reject(error)
 						}
 					case .failure(let error):
-						fail(error)
+						seal.reject(error)
 					}
 			}
-		})
+		}
 	}
 		
 	internal func execute(_ request: UploadRequest) -> Promise<RequestResponse> {
-		return Promise<RequestResponse>(in: .userInitiated, { (fulfill, fail, _) in
+		return firstly(on: dispatchQueue) { (seal) in
 			request.authenticate(with: self.credentials)
 				//.validate()
 				.debugLog()
@@ -250,13 +253,13 @@ public class AlamofireHttpEngine: HttpEngine {
 					self.progressMonitor?(progress.fractionCompleted)
 			}.responseData(queue: AlamofireHttpEngine.processQueue,
 										 completionHandler: { (response) in
-											self.process(response, then: fulfill, fail: fail)
+											self.process(response, resolver: seal)
 			})
-		})
+		}
 	}
 	
 	internal func execute(_ request: DataRequest) -> Promise<RequestResponse> {
-		return Promise<RequestResponse>(in: .userInitiated, { (fulfill, fail, _) in
+		return firstly(on: dispatchQueue) { (seal) in
 			request.authenticate(with: self.credentials)
 				.debugLog()
 				//.validate()
@@ -264,9 +267,9 @@ public class AlamofireHttpEngine: HttpEngine {
 					self.progressMonitor?(progress.fractionCompleted)
 			}.responseData(queue: AlamofireHttpEngine.processQueue,
 										 completionHandler: { (response) in
-											self.process(response, then: fulfill, fail: fail)
+											self.process(response, resolver: seal)
 			})
-		})
+		}
 	}
 }
 

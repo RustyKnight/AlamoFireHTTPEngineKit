@@ -1,2 +1,2 @@
 xcodebuild -version
-time carthage update --configuration Debug
+time carthage12 update
