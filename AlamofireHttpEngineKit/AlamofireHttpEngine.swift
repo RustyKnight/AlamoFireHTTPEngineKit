@@ -67,13 +67,13 @@ public class AlamofireHttpEngine: HttpEngine {
 	static let processQueue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
 
 	let url: URL
-	var parameters: [String: String]?
-	var headers: [String: String]?
-	var credentials: HttpEngineCore.Credentials?
-	var progressMonitor: ProgressMonitor?
-	var timeout: TimeInterval = 30
+	let parameters: [String: String]?
+	let headers: [String: String]?
+	let credentials: HttpEngineCore.Credentials?
+	let progressMonitor: ProgressMonitor?
+	private(set) var timeout: TimeInterval = 30
 	
-	var dispatchQueue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
+	let dispatchQueue: DispatchQueue
 	
 	internal lazy var session: SessionManager = {
 		let sessionConfig = URLSessionConfiguration.default
@@ -90,6 +90,7 @@ public class AlamofireHttpEngine: HttpEngine {
 			 headers: [String: String]? = nil,
 			 credentials: HttpEngineCore.Credentials? = nil,
 			 timeout: TimeInterval? = nil,
+			 dispatchQueue: DispatchQueue = DispatchQueue.global(qos: .userInitiated),
 			 progressMonitor: ProgressMonitor?) {
 		self.url = url
 		self.headers = headers
@@ -99,6 +100,7 @@ public class AlamofireHttpEngine: HttpEngine {
 			self.timeout = requestTimeout
 		}
 		self.progressMonitor = progressMonitor
+		self.dispatchQueue = dispatchQueue
 	}
 	
 	func process(_ response: DataResponse<Data>, resolver: Resolver<RequestResponse>) {
