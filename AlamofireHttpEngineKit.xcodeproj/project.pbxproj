@@ -201,7 +201,7 @@
 		18B0A4052381F9B100BC0614 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Shane Whitehead";
 				TargetAttributes = {
 					18B0A40D2381F9B100BC0614 = {
@@ -423,7 +423,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kaizen.AlamofireHttpEngineKit-iOS";
 				PRODUCT_NAME = AlamofireHttpEngineKit;
 				SKIP_INSTALL = YES;
@@ -456,7 +456,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kaizen.AlamofireHttpEngineKit-iOS";
 				PRODUCT_NAME = AlamofireHttpEngineKit;
 				SKIP_INSTALL = YES;
@@ -489,7 +489,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kaizen.AlamofireHttpEngineKit-macOS";
 				PRODUCT_NAME = AlamofireHttpEngineKit;
 				SDKROOT = macosx;
@@ -522,7 +522,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kaizen.AlamofireHttpEngineKit-macOS";
 				PRODUCT_NAME = AlamofireHttpEngineKit;
 				SDKROOT = macosx;
