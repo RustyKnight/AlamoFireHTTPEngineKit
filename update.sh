@@ -1,2 +1,2 @@
 xcodebuild -version
-time carthage12 update
+time carthage update --use-xcframeworks
