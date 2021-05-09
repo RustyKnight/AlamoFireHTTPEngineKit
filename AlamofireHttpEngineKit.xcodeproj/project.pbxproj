@@ -12,13 +12,9 @@
 		1809CF242646A41A00B2DEFF /* Cadmus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */; };
 		1809CF262646A41A00B2DEFF /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */; };
 		1809CF282646A42100B2DEFF /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */; };
-		1809CF292646A42100B2DEFF /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1809CF2A2646A42100B2DEFF /* Cadmus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */; };
-		1809CF2B2646A42100B2DEFF /* Cadmus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1809CF2C2646A42100B2DEFF /* HttpEngineCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1D2646A41A00B2DEFF /* HttpEngineCore.xcframework */; };
-		1809CF2D2646A42100B2DEFF /* HttpEngineCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1D2646A41A00B2DEFF /* HttpEngineCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1809CF2E2646A42100B2DEFF /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */; };
-		1809CF2F2646A42100B2DEFF /* PromiseKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		185376A524C8F91800FC2FBE /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
 		185376A624C8F91800FC2FBE /* AlamofireHttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */; };
 		185376A924C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
@@ -31,23 +27,6 @@
 		1899C22D251710FA0073731E /* Promise+Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899C22525170F060073731E /* Promise+Dispatch.swift */; };
 		18B0A41C2381F9BE00BC0614 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 18B0A41A2381F9BE00BC0614 /* README.md */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		1809CF302646A42100B2DEFF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1809CF2F2646A42100B2DEFF /* PromiseKit.xcframework in Embed Frameworks */,
-				1809CF2D2646A42100B2DEFF /* HttpEngineCore.xcframework in Embed Frameworks */,
-				1809CF2B2646A42100B2DEFF /* Cadmus.xcframework in Embed Frameworks */,
-				1809CF292646A42100B2DEFF /* Alamofire.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
@@ -164,7 +143,6 @@
 				18B0A40A2381F9B100BC0614 /* Sources */,
 				18B0A40B2381F9B100BC0614 /* Frameworks */,
 				18B0A40C2381F9B100BC0614 /* Resources */,
-				1809CF302646A42100B2DEFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
