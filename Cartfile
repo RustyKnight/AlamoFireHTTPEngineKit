@@ -1,9 +1,9 @@
-#binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/Cadmus" ~> 1.0.9
-#binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/HttpEngineCore" ~> 2.0.0
+binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/Cadmus" ~> 1.1.0
+binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/HttpEngineCore" ~> 2.1.0
 #binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/Alamofire" ~> 5.2.2
 
-github "https://github.com/RustyKnight/Cadmus" ~> 1.0.9
-github "https://github.com/RustyKnight/HttpEngineCore" ~> 2.0.1
+#github "https://github.com/RustyKnight/Cadmus" ~> 1.1.0
+#github "https://github.com/RustyKnight/HttpEngineCore" ~> 2.0.1
 github "https://github.com/Alamofire/Alamofire" == 4.8.0
 
 # Promises
