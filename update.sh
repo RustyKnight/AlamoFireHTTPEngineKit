@@ -1,2 +1,2 @@
 xcodebuild -version
-time carthage update --use-xcframeworks
+time swncarthage update --skip-simulators

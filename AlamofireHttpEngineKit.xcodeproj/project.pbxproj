@@ -3,22 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1836FDFA2683E8870081295A /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1836FDF62683E8870081295A /* Cadmus.framework */; };
+		1836FDFC2683E8870081295A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1836FDF72683E8870081295A /* Alamofire.framework */; };
+		1836FDFE2683E8870081295A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1836FDF82683E8870081295A /* PromiseKit.framework */; };
+		1836FE002683E8870081295A /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1836FDF92683E8870081295A /* HttpEngineCore.framework */; };
+		1843714D2683E951008390C4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184371492683E950008390C4 /* Alamofire.framework */; };
+		1843714F2683E951008390C4 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1843714A2683E951008390C4 /* PromiseKit.framework */; };
+		184371512683E951008390C4 /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1843714B2683E951008390C4 /* Cadmus.framework */; };
+		184371532683E951008390C4 /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1843714C2683E951008390C4 /* HttpEngineCore.framework */; };
 		185376A524C8F91800FC2FBE /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
 		185376A624C8F91800FC2FBE /* AlamofireHttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */; };
 		185376A924C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
 		185376AA24C8F91800FC2FBE /* MultipartFormData+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A424C8F91800FC2FBE /* MultipartFormData+Item.swift */; };
-		185D7773266F3A8600A82A5E /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */; };
-		185D7775266F3A8600A82A5E /* Cadmus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */; };
-		185D7777266F3A8600A82A5E /* HttpEngineCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1D2646A41A00B2DEFF /* HttpEngineCore.xcframework */; };
-		185D7779266F3A8600A82A5E /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */; };
-		185D777C266F3A8B00A82A5E /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */; };
-		185D777E266F3A8B00A82A5E /* Cadmus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */; };
-		185D7780266F3A8B00A82A5E /* HttpEngineCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1D2646A41A00B2DEFF /* HttpEngineCore.xcframework */; };
-		185D7782266F3A8B00A82A5E /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */; };
 		188A299F24C8FB3800F2CC2B /* AlamofireHttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */; };
 		188A29A024C8FB3800F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
 		188A29A324C8FB3800F2CC2B /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
@@ -29,10 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
-		1809CF1D2646A41A00B2DEFF /* HttpEngineCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HttpEngineCore.xcframework; path = Carthage/Build/HttpEngineCore.xcframework; sourceTree = "<group>"; };
-		1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Cadmus.xcframework; path = Carthage/Build/Cadmus.xcframework; sourceTree = "<group>"; };
-		1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PromiseKit.xcframework; path = Carthage/Build/PromiseKit.xcframework; sourceTree = "<group>"; };
+		1836FDF62683E8870081295A /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/iOS/Cadmus.framework; sourceTree = "<group>"; };
+		1836FDF72683E8870081295A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1836FDF82683E8870081295A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		1836FDF92683E8870081295A /* HttpEngineCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HttpEngineCore.framework; path = Carthage/Build/iOS/HttpEngineCore.framework; sourceTree = "<group>"; };
+		184371492683E950008390C4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		1843714A2683E951008390C4 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
+		1843714B2683E951008390C4 /* Cadmus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cadmus.framework; path = Carthage/Build/Mac/Cadmus.framework; sourceTree = "<group>"; };
+		1843714C2683E951008390C4 /* HttpEngineCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HttpEngineCore.framework; path = Carthage/Build/Mac/HttpEngineCore.framework; sourceTree = "<group>"; };
 		1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpURLRequestBuilder.swift; sourceTree = "<group>"; };
 		185376A024C8F91800FC2FBE /* AlamofireHttpEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHttpEngine.swift; sourceTree = "<group>"; };
 		185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHttpRequestBuilder.swift; sourceTree = "<group>"; };
@@ -50,10 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185D7779266F3A8600A82A5E /* PromiseKit.xcframework in Frameworks */,
-				185D7777266F3A8600A82A5E /* HttpEngineCore.xcframework in Frameworks */,
-				185D7775266F3A8600A82A5E /* Cadmus.xcframework in Frameworks */,
-				185D7773266F3A8600A82A5E /* Alamofire.xcframework in Frameworks */,
+				1836FDFE2683E8870081295A /* PromiseKit.framework in Frameworks */,
+				1836FDFA2683E8870081295A /* Cadmus.framework in Frameworks */,
+				1836FDFC2683E8870081295A /* Alamofire.framework in Frameworks */,
+				1836FE002683E8870081295A /* HttpEngineCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,10 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185D7782266F3A8B00A82A5E /* PromiseKit.xcframework in Frameworks */,
-				185D7780266F3A8B00A82A5E /* HttpEngineCore.xcframework in Frameworks */,
-				185D777E266F3A8B00A82A5E /* Cadmus.xcframework in Frameworks */,
-				185D777C266F3A8B00A82A5E /* Alamofire.xcframework in Frameworks */,
+				184371512683E951008390C4 /* Cadmus.framework in Frameworks */,
+				1843714D2683E951008390C4 /* Alamofire.framework in Frameworks */,
+				1843714F2683E951008390C4 /* PromiseKit.framework in Frameworks */,
+				184371532683E951008390C4 /* HttpEngineCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +111,14 @@
 		18B0A4602381FAC600BC0614 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1809CF1C2646A41A00B2DEFF /* Alamofire.xcframework */,
-				1809CF1E2646A41A00B2DEFF /* Cadmus.xcframework */,
-				1809CF1D2646A41A00B2DEFF /* HttpEngineCore.xcframework */,
-				1809CF1F2646A41A00B2DEFF /* PromiseKit.xcframework */,
+				184371492683E950008390C4 /* Alamofire.framework */,
+				1843714B2683E951008390C4 /* Cadmus.framework */,
+				1843714C2683E951008390C4 /* HttpEngineCore.framework */,
+				1843714A2683E951008390C4 /* PromiseKit.framework */,
+				1836FDF72683E8870081295A /* Alamofire.framework */,
+				1836FDF62683E8870081295A /* Cadmus.framework */,
+				1836FDF92683E8870081295A /* HttpEngineCore.framework */,
+				1836FDF82683E8870081295A /* PromiseKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -403,6 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kaizen.AlamofireHttpEngineKit-iOS";
 				PRODUCT_NAME = AlamofireHttpEngineKit;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -436,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.kaizen.AlamofireHttpEngineKit-iOS";
 				PRODUCT_NAME = AlamofireHttpEngineKit;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,7 +463,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = AlamofireHttpEngineKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,7 +496,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = AlamofireHttpEngineKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
