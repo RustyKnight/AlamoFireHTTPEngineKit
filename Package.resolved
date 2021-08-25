@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "75bba56748359f297a83f620d45f72cf4ebee4e7",
+          "version": "4.8.2"
+        }
+      },
+      {
+        "package": "Cadmus",
+        "repositoryURL": "https://github.com/RustyKnight/Cadmus",
+        "state": {
+          "branch": "feature/spm",
+          "revision": "b674faa643a259f9380c0e4f9687f1e841e74581",
+          "version": null
+        }
+      },
+      {
+        "package": "HttpEngineCore",
+        "repositoryURL": "https://github.com/RustyKnight/HttpEngineCore",
+        "state": {
+          "branch": "feature/spm",
+          "revision": "5032295ed131c18cacb6b7585d9f473b8cd0ffed",
+          "version": null
+        }
+      },
+      {
+        "package": "Hydra",
+        "repositoryURL": "https://github.com/malcommac/Hydra.git",
+        "state": {
+          "branch": null,
+          "revision": "1d508bc909b1e7c334c1720a4b7d93a5b2d3012a",
+          "version": "2.0.6"
+        }
+      },
+      {
+        "package": "PromiseKit",
+        "repositoryURL": "https://github.com/mxcl/PromiseKit",
+        "state": {
+          "branch": null,
+          "revision": "cf94b87e50e6c21bf42887e3474a2785f1049591",
+          "version": "6.14.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

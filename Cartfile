@@ -1,6 +1,0 @@
-binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/Cadmus" ~> 1.0.9
-binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/HttpEngineCore" ~> 2.0.0
-binary "https://www.kiazenenterprises.org:8443/json/12.5b12E262/Alamofire" ~> 5.2.2
-# Promises
-github "mxcl/PromiseKit" ~> 6.8
-# Logging

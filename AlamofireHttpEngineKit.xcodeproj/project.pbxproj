@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,18 +15,16 @@
 		188A29A024C8FB3800F2CC2B /* AlamofireHttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A324C8F91800FC2FBE /* AlamofireHttpRequestBuilder.swift */; };
 		188A29A324C8FB3800F2CC2B /* HttpURLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853769F24C8F91800FC2FBE /* HttpURLRequestBuilder.swift */; };
 		188A29A424C8FB3800F2CC2B /* MultipartFormData+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185376A424C8F91800FC2FBE /* MultipartFormData+Item.swift */; };
-		1899C2072516F1CC0073731E /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C2042516F1CC0073731E /* Cadmus.framework */; };
-		1899C2092516F1CC0073731E /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C2052516F1CC0073731E /* HttpEngineCore.framework */; };
-		1899C20B2516F1CC0073731E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C2062516F1CC0073731E /* PromiseKit.framework */; };
 		1899C2112516F1DA0073731E /* HttpEngineCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C20E2516F1DA0073731E /* HttpEngineCore.framework */; };
 		1899C2132516F1DA0073731E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C20F2516F1DA0073731E /* PromiseKit.framework */; };
 		1899C2152516F1DA0073731E /* Cadmus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C2102516F1DA0073731E /* Cadmus.framework */; };
-		1899C21E2516F2750073731E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C21D2516F2750073731E /* Alamofire.framework */; };
 		1899C2222516F2820073731E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C2212516F2820073731E /* Alamofire.framework */; };
 		1899C2232516F2820073731E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1899C2212516F2820073731E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1899C22625170F060073731E /* Promise+Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899C22525170F060073731E /* Promise+Dispatch.swift */; };
 		1899C22D251710FA0073731E /* Promise+Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899C22525170F060073731E /* Promise+Dispatch.swift */; };
 		18B0A41C2381F9BE00BC0614 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 18B0A41A2381F9BE00BC0614 /* README.md */; };
+		70F3DBE226D5F92A0060D45B /* HttpEngineCore in Frameworks */ = {isa = PBXBuildFile; productRef = 70F3DBE126D5F92A0060D45B /* HttpEngineCore */; };
+		70F3DBE526D5F94D0060D45B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 70F3DBE426D5F94D0060D45B /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,10 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1899C20B2516F1CC0073731E /* PromiseKit.framework in Frameworks */,
-				1899C2072516F1CC0073731E /* Cadmus.framework in Frameworks */,
-				1899C2092516F1CC0073731E /* HttpEngineCore.framework in Frameworks */,
-				1899C21E2516F2750073731E /* Alamofire.framework in Frameworks */,
+				70F3DBE226D5F92A0060D45B /* HttpEngineCore in Frameworks */,
+				70F3DBE526D5F94D0060D45B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +168,10 @@
 			dependencies = (
 			);
 			name = iOS;
+			packageProductDependencies = (
+				70F3DBE126D5F92A0060D45B /* HttpEngineCore */,
+				70F3DBE426D5F94D0060D45B /* Alamofire */,
+			);
 			productName = AlamofireHttpEngineKit;
 			productReference = 18B0A40E2381F9B100BC0614 /* AlamofireHttpEngineKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -223,6 +223,10 @@
 				Base,
 			);
 			mainGroup = 18B0A4042381F9B100BC0614;
+			packageReferences = (
+				70F3DBE026D5F92A0060D45B /* XCRemoteSwiftPackageReference "HttpEngineCore" */,
+				70F3DBE326D5F94D0060D45B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 18B0A40F2381F9B100BC0614 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -562,6 +566,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70F3DBE026D5F92A0060D45B /* XCRemoteSwiftPackageReference "HttpEngineCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RustyKnight/HttpEngineCore";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+		70F3DBE326D5F94D0060D45B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 4.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70F3DBE126D5F92A0060D45B /* HttpEngineCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70F3DBE026D5F92A0060D45B /* XCRemoteSwiftPackageReference "HttpEngineCore" */;
+			productName = HttpEngineCore;
+		};
+		70F3DBE426D5F94D0060D45B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70F3DBE326D5F94D0060D45B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18B0A4052381F9B100BC0614 /* Project object */;
 }
