@@ -19,8 +19,9 @@ open class AlamofireHttpRequestBuilder: BaseHttpRequestBuilder {
       components.queryItems = queryItems
     }
 
-    
-		return AlamofireHttpEngine(url: url,
+    let target = try components.asURL()
+    log(debug: "target = \(target)")
+    return AlamofireHttpEngine(url: try components.asURL(),
 															 //parameters: par,
 															 headers: headers,
 															 credentials: credentials,
