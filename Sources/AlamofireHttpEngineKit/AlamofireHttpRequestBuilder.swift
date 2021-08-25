@@ -10,12 +10,6 @@ import Foundation
 import HttpEngineCore
 import Alamofire
 import Cadmus
-//
-//class AlamofireHttpRequestBuilderFactory: HttpRequestBuilderFactory {
-//	func request(to: URL) -> HttpRequestBuilder {
-//		return AlamofireHttpRequestBuilder(to: to)
-//	}
-//}
 
 open class AlamofireHttpRequestBuilder: BaseHttpRequestBuilder {
 

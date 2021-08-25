@@ -1,3 +1,3 @@
-# AlamoFireHTTPEngineKit
+# AlamofireHttpEngineKit
 
-An implement of the HTTPEngineKit backed by AlamoFire
+A description of this package.
