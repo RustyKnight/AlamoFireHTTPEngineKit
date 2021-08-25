@@ -76,17 +76,27 @@ public class AlamofireHttpEngine: HttpEngine {
 	let dispatchQueue: DispatchQueue
 	
 	internal lazy var session: SessionManager = {
-		let sessionConfig = URLSessionConfiguration.default
-		sessionConfig.timeoutIntervalForRequest = timeout
-		sessionConfig.timeoutIntervalForResource = timeout * 10
-		sessionConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
-		
-		let sessionManager = SessionManager(configuration: sessionConfig)
-		return sessionManager
+    let sessionConfig = URLSessionConfiguration.default
+    sessionConfig.timeoutIntervalForRequest = timeout
+    sessionConfig.timeoutIntervalForResource = timeout * 10
+    sessionConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
+    if #available(iOS 11.0, *) {
+      sessionConfig.waitsForConnectivity = true
+    }
+    sessionConfig.networkServiceType = .responsiveData
+    sessionConfig.shouldUseExtendedBackgroundIdleMode = true
+    if #available(iOS 13, *) {
+      sessionConfig.allowsConstrainedNetworkAccess = true
+      sessionConfig.allowsExpensiveNetworkAccess = true
+    }
+    sessionConfig.httpMaximumConnectionsPerHost = 24
+
+    let sessionManager = SessionManager(configuration: sessionConfig)
+    return sessionManager
 	}()
 	
 	public init(url: URL,
-			 parameters: [String: String]? = nil,
+			 queryItems: [URLQueryItem]? = nil,
 			 headers: [String: String]? = nil,
 			 credentials: HttpEngineCore.Credentials? = nil,
 			 timeout: TimeInterval? = nil,
@@ -94,7 +104,15 @@ public class AlamofireHttpEngine: HttpEngine {
 			 progressMonitor: ProgressMonitor?) {
 		self.url = url
 		self.headers = headers
-		self.parameters = parameters
+    if let queryItems = queryItems {
+      var parameters: [String: String] = [:]
+      for item in queryItems {
+        parameters[item.name] = item.value
+      }
+      self.parameters = parameters
+    } else {
+      self.parameters = nil
+    }
 		self.credentials = credentials
 		if let requestTimeout = timeout {
 			self.timeout = requestTimeout
@@ -139,7 +157,7 @@ public class AlamofireHttpEngine: HttpEngine {
 				""")
 			self.session.request(self.url,
 													 method: method,
-													 parameters: nil,
+                           parameters: parameters,
 													 encoding: URLEncoding.default,
 													 headers: self.headers)
 				.authenticate(with: self.credentials)

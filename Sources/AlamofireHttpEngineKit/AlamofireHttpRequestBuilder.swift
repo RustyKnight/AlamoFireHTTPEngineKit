@@ -15,7 +15,7 @@ open class AlamofireHttpRequestBuilder: BaseHttpRequestBuilder {
 
 	override open func build() throws -> HttpEngine {
 		return AlamofireHttpEngine(url: url,
-															 parameters: parameters,
+															 queryItems: queryItems,
 															 headers: headers,
 															 credentials: credentials,
 															 timeout: timeout,

@@ -14,7 +14,7 @@ let package = Package(
   dependencies: [
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
-    .package(url: "https://github.com/RustyKnight/HttpEngineCore", .upToNextMajor(from: "3.0.0")),
+    .package(url: "https://github.com/RustyKnight/HttpEngineCore", .upToNextMajor(from: "3.0.3")),
     .package(url: "https://github.com/Alamofire/Alamofire", "4.8.2"..."4.8.2"),
   ],
   targets: [
