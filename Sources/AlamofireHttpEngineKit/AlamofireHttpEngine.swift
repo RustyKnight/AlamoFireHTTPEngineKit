@@ -67,7 +67,7 @@ public class AlamofireHttpEngine: HttpEngine {
 	static let processQueue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
 
 	let url: URL
-	let parameters: [String: String]?
+//	let parameters: [String: String]?
 	let headers: [String: String]?
 	let credentials: HttpEngineCore.Credentials?
 	let progressMonitor: ProgressMonitor?
@@ -96,7 +96,7 @@ public class AlamofireHttpEngine: HttpEngine {
 	}()
 	
 	public init(url: URL,
-			 queryItems: [URLQueryItem]? = nil,
+//			 queryItems: [URLQueryItem]? = nil,
 			 headers: [String: String]? = nil,
 			 credentials: HttpEngineCore.Credentials? = nil,
 			 timeout: TimeInterval? = nil,
@@ -104,15 +104,6 @@ public class AlamofireHttpEngine: HttpEngine {
 			 progressMonitor: ProgressMonitor?) {
 		self.url = url
 		self.headers = headers
-    if let queryItems = queryItems {
-      var parameters: [String: String] = [:]
-      for item in queryItems {
-        parameters[item.name] = item.value
-      }
-      self.parameters = parameters
-    } else {
-      self.parameters = nil
-    }
 		self.credentials = credentials
 		if let requestTimeout = timeout {
 			self.timeout = requestTimeout
@@ -157,7 +148,7 @@ public class AlamofireHttpEngine: HttpEngine {
 				""")
 			self.session.request(self.url,
 													 method: method,
-                           parameters: parameters,
+                           parameters: nil,
 													 encoding: URLEncoding.default,
 													 headers: self.headers)
 				.authenticate(with: self.credentials)

@@ -14,8 +14,14 @@ import Cadmus
 open class AlamofireHttpRequestBuilder: BaseHttpRequestBuilder {
 
 	override open func build() throws -> HttpEngine {
+    var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+    if !queryItems.isEmpty {
+      components.queryItems = queryItems
+    }
+
+    
 		return AlamofireHttpEngine(url: url,
-															 queryItems: queryItems,
+															 //parameters: par,
 															 headers: headers,
 															 credentials: credentials,
 															 timeout: timeout,
