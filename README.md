@@ -1,3 +1,3 @@
 # AlamofireHttpEngineKit
 
-A description of this package.
+An implementation of [HttpEngineCore](https://github.com/RustyKnight/HttpEngineCore) backed by [Alamofire](https://github.com/Alamofire/Alamofire) 
